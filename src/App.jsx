@@ -3,7 +3,7 @@
 import { useState } from "react";
 import "./App.css";
 import Button from "./components/Btn";
-import CheckBoxes from "./components/Check";
+import CheckBoxes from "./components/CheckBoxes";
 import Divider from "./components/Divider";
 
 const checkBoxes = [

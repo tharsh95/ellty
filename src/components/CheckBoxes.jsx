@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
 const CheckBoxes = ({ title, name, isChecked, onChange }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
-  const [tickColor, setTickColor] = useState();
+  const [tickColor, setTickColor] = useState("text-white");
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -20,13 +21,14 @@ const CheckBoxes = ({ title, name, isChecked, onChange }) => {
   const handleMouseDown = () => {
     setIsPressed(true);
     // if (isChecked) {
-    //   setTickColor("text-white");
+      setTickColor("text-gray-500");
     // }
   };
 
   const handleMouseUp = () => {
     setIsPressed(false);
-    setTickColor("text-white")
+
+      setTickColor("text-white")
     onChange();
   };
 
